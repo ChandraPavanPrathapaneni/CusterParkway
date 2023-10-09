@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentIndex = 0;
     const cardCount = images.length;
-    const cardWidth = images[0].clientWidth + 108; // Adjust for card width and gap
+    const cardWidth = images[0].clientWidth+100 ; // Adjust for card width and gap
 
     nextButton.addEventListener("click", function () {
         currentIndex++;

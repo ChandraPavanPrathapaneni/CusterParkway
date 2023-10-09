@@ -103,11 +103,12 @@ body, h1, p {
     white-space: nowrap;
     display: flex; /* Create a horizontal flex container */
     animation: bannermove 10s linear infinite;
+    height: fit-content;
 }
 
 .scroll-content {
     display: flex; /* Create a horizontal flex container for images */
-    gap: 100px; /* Adjust the gap between images */
+    gap: 480px; /* Adjust the gap between images */
     padding: 20px; /* Add padding as needed */
 }
 
@@ -134,31 +135,48 @@ body, h1, p {
 
 .prev-button,
 .next-button {
-    position: absolute;
-    top: 90%;
-    font-size: 24px; /* Adjust font size as needed */
-    background-color: #007bff;
-    color: white;
+    font-size: 50px;
+    background-color: #00000000;
+    color: rgb(0, 0, 0);
     border: none;
+    border-radius: 50%;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 40px; /* Adjust button width as needed */
-    height: 40px; /* Adjust button height as needed */
+    transition: background-color 0.35s ease;
+    width: 100px;
+    height: 100px;
     z-index: 2;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-50%);
 }
 
 .prev-button {
-    left: 20px; /* Adjust the left position as needed */
-    transform: translateY(-50%);
+    left: 0;
 }
 
 .next-button {
-    right: 20px; /* Adjust the right position as needed */
-    transform: translateY(-50%);
+    right: 0;
 }
 
 /* Optional: Add hover effect to buttons */
 .prev-button:hover,
 .next-button:hover {
-    background-color: #0056b3;
+    background-color: #000000b3;
+}
+
+.scroll-content a {
+    display: inline-block; /* Set spans to inline-block to keep them together */
+    text-align: center; /* Center text within the span */
+    margin: 0px; /* Add some margin for spacing */
+    text-decoration: none; /* Remove underline on the links */
+    color: #333; /* Set text color */
+}
+
+.scroll-content a span {
+    display: block; /* Set the spans to display as block elements */
+    margin: 50px;
+    font-weight: bold; /* Optional: Apply bold font weight to the span text */
+    left: 30%;
+
+    transform: translate(30%, 20%);
 }
